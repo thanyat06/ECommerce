@@ -1,5 +1,10 @@
 using ECommerce.API.Data;
 using Microsoft.EntityFrameworkCore;
+using Scalar.AspNetCore;
+using ECommerce.API.Repositories;
+using ECommerce.API.Repositories.Interfaces;
+using ECommerce.API.Services;
+using ECommerce.API.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,12 +30,16 @@ builder.Services.AddCors(options =>
     });
 });
 
+// Category Repository and Service
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.MapSwagger("/openapi/{documentName}.json");
+    app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();
