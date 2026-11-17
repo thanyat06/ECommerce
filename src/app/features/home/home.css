@@ -1,0 +1,277 @@
+.hero {
+  background: #f7f7ff;
+  padding: 85px 24px;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.hero-label,
+.section-heading span {
+  color: #635bff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero-content h1 {
+  font-size: clamp(42px, 5vw, 65px);
+  line-height: 1.12;
+  color: #171923;
+  margin: 22px 0;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.hero-content h1 span {
+  color: #635bff;
+}
+
+.hero-content > p {
+  color: #666879;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-block;
+  padding: 14px 23px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.primary-btn {
+  background: #635bff;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #5148e5;
+}
+
+.secondary-btn {
+  color: #34354a;
+  border: 1px solid #d8d8e5;
+  background: white;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 45px;
+  margin-top: 50px;
+}
+
+.hero-stats h3 {
+  font-size: 19px;
+  color: #171923;
+  margin-bottom: 5px;
+}
+
+.hero-stats p {
+  font-size: 13px;
+  color: #77798a;
+}
+
+.hero-visual {
+  position: relative;
+  padding: 30px;
+}
+
+.main-card {
+  background: white;
+  padding: 40px;
+  border-radius: 22px;
+  box-shadow: 0 25px 70px rgba(44, 39, 100, 0.12);
+}
+
+.shopping-icon {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.main-card h2 {
+  font-size: 25px;
+  color: #171923;
+}
+
+.main-card > p {
+  color: #77798a;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.visual-items {
+  margin-top: 30px;
+}
+
+.visual-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 17px 0;
+  border-bottom: 1px solid #eeeeF5;
+}
+
+.visual-item span {
+  color: #635bff;
+  font-weight: 800;
+}
+
+.visual-item p {
+  color: #34354a;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.floating-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  padding: 16px 22px;
+  border-radius: 12px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.floating-card span {
+  color: #16a36a;
+  margin-right: 8px;
+}
+
+.about-section {
+  padding: 90px 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+.section-heading h2 {
+  color: #171923;
+  font-size: 36px;
+  margin: 15px 0;
+}
+
+.section-heading p {
+  color: #77798a;
+  line-height: 1.7;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 55px;
+}
+
+.benefit-card {
+  padding: 35px;
+  border: 1px solid #eeeeF5;
+  border-radius: 15px;
+  transition: 0.2s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+.benefit-icon {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+  color: #171923;
+  margin-bottom: 12px;
+}
+
+.benefit-card p {
+  color: #77798a;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.cta-section {
+  background: #f7f7ff;
+  text-align: center;
+  padding: 65px 24px;
+}
+
+.cta-section h2 {
+  color: #171923;
+  font-size: 32px;
+}
+
+.cta-section p {
+  color: #77798a;
+  margin: 15px 0 25px;
+}
+
+@media (max-width: 850px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-visual {
+    max-width: 550px;
+    margin: auto;
+    width: 100%;
+  }
+
+  .benefit-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    padding: 55px 16px;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .main-card {
+    padding: 25px;
+  }
+
+  .hero-visual {
+    padding: 15px;
+  }
+
+  .floating-card {
+    left: -5px;
+    font-size: 11px;
+  }
+
+  .section-heading h2 {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,96 @@
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 23px;
+  font-weight: 800;
+  color: #171717;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: #635bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-link,
+.login-link {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-link:hover,
+.login-link:hover {
+  color: #635bff;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.register-btn {
+  background: #635bff;
+  color: white;
+  text-decoration: none;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.register-btn:hover {
+  background: #5148e5;
+}
+
+@media (max-width: 650px) {
+  .nav-container {
+    padding: 14px 16px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 16px;
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-actions {
+    gap: 12px;
+  }
+}
